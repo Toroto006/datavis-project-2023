@@ -1,6 +1,7 @@
   // ============================= Types ============================ //
   interface stringDict { [index: string]: any }
   interface counter { [index: string]: number }
+  interface time_list { [index: string]: Array<string> }
 
   interface contact{
     name: string,
@@ -11,7 +12,9 @@
 
   interface chatStats { 
     idSendCount: counter,
+    idTimestampsList: time_list
   }
+
   interface messageStats {
     [index: string]: chatStats
   }
@@ -30,6 +33,7 @@
     'sent-by': string,
     timestamp: string,
   }
+
   interface messageDict{ [index: string]: message }
 
   interface contactStats { 
@@ -38,6 +42,7 @@
   }
 interface contactStatsDict{ [index: string]: contactStats }
   
+
 export type {contactStatsDict, contactStats, messageStats, group, groupDict, message, messageDict, contact, contactDict, stringDict, counter}
 
   // =============================================================== //

@@ -40,7 +40,8 @@ function Home() {
   const [messageStatsPerChat, setMessageStatsPerChat] = useState<messageStats>({})
   // Number of messages sent by each user
   const [messageStatsPerContact, setMessageStatsPerContact] = useState<contactStatsDict>({})
-  
+
+
   const [selectedId, setSelectedId] = useState<number>()
 
 
@@ -83,21 +84,21 @@ function Home() {
   }
 
   function updateMessageStatsPerContact(messages: any) {
-
     let updated_stats: messageStats = {}
     Object.keys(messages).forEach((key) => {
       let chat_id = messages[key].chat
       let sender = messages[key]["sent-by"]
-
+      let timestamp = messages[key].timestamp
       // If the chat is not in the dict, add it
       if (!updated_stats[chat_id]) {
-        updated_stats[chat_id] = { idSendCount: {} }
+        updated_stats[chat_id] = { idSendCount: {}, idTimestampsList: {}}
       }
       // If the sender is not in the chat, add it
       if (!updated_stats[chat_id].idSendCount[sender]) {
         updated_stats[chat_id].idSendCount[sender] = 0
       }
       updated_stats[chat_id].idSendCount[sender] += 1;
+      updated_stats[chat_id].idTimestampsList[sender] += timestamp;
     })
 
     console.log("updated_stats: ", updated_stats)
