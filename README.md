@@ -1,7 +1,7 @@
 # Project of Data Visualization (COM-480) moved to github classroom [here](https://github.com/com-480-data-visualization/project-2023-what-s-viz)
 
-Click below to watch our presentation video of What's Viz:  
-[<img src="Milestones/figures/video_thumbnail.png" width="50%">](https://drive.google.com/file/d/1nbVBNSENsk2Auo-obHa2WsYavL-OOQFK/view)
+Click [here](https://drive.google.com/file/d/1nbVBNSENsk2Auo-obHa2WsYavL-OOQFK/view) to watch our final presentation video of What's Viz.
+
 For the source code of the final project look at the [readme](wa-visualization/README.md) there.
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
